@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-content>
+    <v-main>
       <v-container fluid fill-height>
         <v-layout justify-center>
           <v-flex xs12 sm8 md4>
@@ -24,6 +24,14 @@
                     v-model="password"
                   ></v-text-field>
                 </v-form>
+                <v-alert
+                  v-if="errorMessage"
+                  color="red"
+                  dense
+                  text
+                  type="error"
+                  >{{ errorMessage }}</v-alert
+                >
               </v-card-text>
               <v-card-actions>
                 <v-btn color="primary" href="/forgotpassword"
@@ -36,7 +44,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

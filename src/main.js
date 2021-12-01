@@ -8,15 +8,13 @@ import * as firebase from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZJA4Y_MIOtEQDPFqUBo9WzLzXQWOF1mA",
-  authDomain: "test-hosting-39ec6.firebaseapp.com",
-  databaseURL:
-    "https://test-hosting-39ec6-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "test-hosting-39ec6",
-  storageBucket: "test-hosting-39ec6.appspot.com",
-  messagingSenderId: "593596264770",
-  appId: "1:593596264770:web:8c4cde96665b09c90a98db",
-  measurementId: "G-ZWVH0C1GNQ",
+  apiKey: "AIzaSyBo79QXA1wj7mkAm8cH8lNcQxefsBDrjYo",
+  authDomain: "yourapp.firebaseapp.com",
+  projectId: "yourprojectId",
+  storageBucket: "yourapp.appspot.com",
+  messagingSenderId: "942900002197",
+  appId: "1:942900002197:web:a8c3f11c4b081bf74a0a9c",
+  measurementId: "G-TPYTZG44L5",
 };
 
 Vue.config.productionTip = false;
@@ -30,7 +28,6 @@ new Vue({
     firebase.initializeApp(firebaseConfig);
     const auth = getAuth();
     auth.onAuthStateChanged((user) => {
-      console.log("login : ", user);
       store.dispatch("fetchUser", user);
     });
   },

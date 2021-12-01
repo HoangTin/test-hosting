@@ -7,14 +7,14 @@ export default new Vuex.Store({
   state: {
     user: {
       loggedIn: false,
-      data: null
-    }
+      data: null,
+    },
   },
 
   getters: {
-    user(state){
-      return state.user
-    }
+    user(state) {
+      return state.user;
+    },
   },
   mutations: {
     SET_LOGGED_IN(state, value) {
@@ -22,22 +22,22 @@ export default new Vuex.Store({
     },
     SET_USER(state, data) {
       state.user.data = data;
-    }
+    },
   },
   actions: {
     fetchUser({ commit }, user) {
       commit("SET_LOGGED_IN", user !== null);
-      console.log("Fetch User: " , user.uid)
+      console.log("Fetch User: ", user.uid);
       if (user) {
         commit("SET_USER", {
-          userId : user.uid,
-          userPhotoURL : user.userPhotoURL,
+          userId: user.uid,
+          userPhotoURL: user.userPhotoURL,
           displayName: user.displayName,
-          email: user.email
+          email: user.email,
         });
       } else {
         commit("SET_USER", null);
       }
-    }
-  }
+    },
+  },
 });

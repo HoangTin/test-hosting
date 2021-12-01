@@ -81,7 +81,8 @@ export default {
             this.messages.push({
               messageId: change.doc.id,
               text: change.doc.data().text,
-              userPhotoURL: "https://i.pinimg.com/474x/14/a6/32/14a632d773d56ebda196f5f65b437275--funny-emoticons-smileys.jpg",
+              userPhotoURL:
+                "https://i.pinimg.com/474x/14/a6/32/14a632d773d56ebda196f5f65b437275--funny-emoticons-smileys.jpg",
               userName: change.doc.data().userName,
               userId: change.doc.data().userId,
             });
